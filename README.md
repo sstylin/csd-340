@@ -1,2 +1,5 @@
 # csd-340
-CSD340-A311 Web Development with HTML and (2255-DD)
+# CSD340 Web Development with HTML and CSS
+## Contributors
+	- Adam Bailey
+	- Steve Stylin
