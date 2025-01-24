@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    text-align: center;
+}
+
+h1 {
+    color: rgba(0, 102, 204, 1);
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+}
+
+.gallery-item {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+h3 {
+    color: rgba(255, 69, 0, 1);
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(34, 139, 34, 1);
+}
+img {
+    width: 200px; /* Ensures all images are the same size */
+    height: auto; /* Maintains aspect ratio */
+}
