@@ -1,0 +1,82 @@
+
+
+body {
+    background-color: #746E54; /* Alice Blue */
+    color: #333; /* Dark Gray for text */
+    font-family: Arial, sans-serif; /* Font style */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+header {
+    background: #A6A591;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.image-cascade {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.image-cascade img {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.image-cascade img:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+.formatted-image {
+    width: 650px;
+    height: 650px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 2px solid #000; /* Optional: adds a border around the image */
+}
+
+
+.image-container {
+    width: 650px;
+    height: 650px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #A6A591;
+    color: #f2e9e9;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
