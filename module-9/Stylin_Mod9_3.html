@@ -1,0 +1,50 @@
+
+<!-- SEteve Stylin: Module 9.3: Introduction to Javascript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    <p>In the realm of  <span>____</span>, Edgar Allan Poe stands as a towering figure, whose works delve into the depths of the human psyche. 
+        His narratives often explore themes of love, loss, and the macabre, captivating readers with their intricate plots and profound insights. P
+        oe's ability to weave <span>____</span> and emotion into his stories has left an indelible mark on the literary world.</p>
+    <p>One of Poe's most notable contributions is his mastery of the short story format. He revolutionized this genre, crafting tales that are both concise and   <span>____</span>.
+         His works, such as "The Tell-Tale Heart" and "The Fall of the House of Usher," exemplify his skill in creating tension and evoking strong emotional responses from his audience.</p>
+    <p>Moreover, Poe's influence extends beyond literature; he is often credited with laying the groundwork for modern  <span>____</span> fiction. His character C.
+         Auguste Dupin, introduced in "The Murders in the Rue Morgue," is considered one of the first fictional detectives, paving the way for future literary sleuths.</p>
+    
+   
+    <button onclick="replaceText(0)">literature</button>
+    <br>
+    
+    <button onclick="replaceText(1)">suspense</button>
+    <br>
+   
+    <button onclick="replaceText(2)">detective</button>
+    <br>
+  
+    <button onclick="replaceText(3)">impactful</button>
+
+    <script>
+        var words = ["literature", "suspense", "detective", "impactful"];
+        
+        function replaceText(index) {
+            var spans = document.getElementsByTagName('span');
+            spans[index].innerText = words[index];
+        }
+    </script>
+</body>
+</html>
