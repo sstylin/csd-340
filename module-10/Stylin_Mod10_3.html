@@ -1,0 +1,33 @@
+
+<!--Steve Stylin Module 10.3: JavaScript Exercise, Part 2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        .image {
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleImage(imageElement, image1, image2) {
+            imageElement.src = (imageElement.src.includes(image1)) ? image2 : image1;
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <div>
+        <img src="dry.png" alt="Dry Rose" class="image" 
+             onclick="toggleImage(this, 'dry.png', 'wet.png')">
+             <p>Click the image to change season.</p>
+        <img src="red_rose.png" alt="Red Rose" class="image" 
+             onclick="toggleImage(this, 'red_rose.png', 'white_rose.png')">
+             <p>Click the image to change the roses color.</p>
+    </div>
+</body>
+</html>
