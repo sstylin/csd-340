@@ -1,0 +1,100 @@
+<!-- Steve Stylin Module 11.2 Javascript Part 3-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #0e71dad3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #986930;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p style="line-height: 1.6;">This is an interactive To Do List. Type in your first item in the text box, then click Add. Click the Display <br>  button to see current items in the list Click on the Delete Last Entry if you'd like to remove the last entry.</p>
+    <input type="text" id="entryInput" placeholder="Enter your text here">
+    <button id="addButton">Add</button>
+    <button id="deleteButton">Delete Last Entry</button>
+    <button id="displayButton">Display</button>
+   
+
+
+    <div id="output"></div>
+
+    <script>
+        let entries = [];
+
+        function addEntry() {
+            const input = document.getElementById('entryInput').value;
+            if (input) {
+                entries.push(input);
+                alert(`Added: ${input}`);
+                document.getElementById('entryInput').value = '';
+            } else {
+                alert('Please enter a value.');
+            }
+        }
+
+        function deleteLastEntry() {
+            if (entries.length > 0) {
+                const removed = entries.pop();
+                alert(`Deleted: ${removed}`);
+            } else {
+                alert('No entries to delete.');
+            }
+        }
+
+        function displayEntries() {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; // Clear previous output
+            entries.forEach((entry, index) => {
+                outputDiv.innerHTML += `${index + 1}. ${entry}<br>`;
+            });
+        }
+        
+
+        document.getElementById('addButton').addEventListener('click', addEntry);
+        document.getElementById('deleteButton').addEventListener('click', deleteLastEntry);
+        document.getElementById('displayButton').addEventListener('click', displayEntries);
+    </script>
+    <p style="line-height: 1.6;">
+        1. Item 1 = Grade CSD340
+        <br>2. Item 2 = Post in Weekly Forum
+        <br>3. Item 3 = Clean Kayaks
+
+    </p>
+</body>
+</html>
