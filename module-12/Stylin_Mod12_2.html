@@ -1,0 +1,92 @@
+<!--Steve Stylin Module 12.2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" type="text/css" href="Stylin_Mod3_3.css">
+</head>
+<body>
+    <div id="container">
+        <h1 style="text-align: center;">Assignment 12.2: JavaScript - Part 4</h1>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 45%;">
+                
+               
+                <ol id="bookList" style="border: 1px solid red; border-radius: 15px; padding: 10px; list-style-position: inside;">
+                    <h3 style="font-weight: bold;">Top 10 Favorite Books</h3>
+                    <ol>
+                        <button onclick="displayTopToBottom()">Top to Bottom</button>
+                        <button onclick="displayBottomToTop()">Bottom to Top</button>
+                    </ol>
+                    <hr/>
+                    <li>A Walk to Remember</li>
+                    <li>The Notebook</li>
+                    <li>Message in a Bottle</li>
+                    <li>The Space Between Us by Thrity Umrigar</li>
+                    <li>See Me</li>
+                    <li>We Must Be Brave</li>
+                    <li>The Stand</li>
+                    <li>Uncle Tom's Cabin</li>
+                    <li>Progress and Poverty</li>
+                    <li>The Power of Now</li>
+                </ol>
+                
+            </div>
+            <div style="width: 45%;">
+                
+                <ul style="border: 1px dashed red; border-radius: 15px; padding: 10px; list-style-type: upper-roman; list-style-position: inside;">
+                    <h3 style="font-weight: bold;">5 Things I’ve Learned Since the Course Started</h3>
+                    <li>Understanding HTML structure</li>
+                    <li>CSS styling techniques</li>
+                    <li>Responsive design principles</li>
+                    <li>Debugging web pages</li>
+                    <li>Version control with Git</li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 100%; margin-top: 60%;">
+            <a href="../index.html" style="float: right; margin-bottom: 20px;">Back to Landing Page</a>
+        </div>
+    </div>
+    <script>
+        const books = [
+            "A Walk to Remember",
+            "The Notebook",
+            "Message in a Bottle",
+            "The Space Between Us by Thrity Umrigar",
+            "See Me",
+            "We Must Be Brave",
+            "The Stand",
+            "Uncle Tom's Cabin",
+            "Progress and Poverty",
+            "The Power of Now"
+        ];
+function displayTopToBottom() {
+    const list = document.getElementById('bookList');
+    list.innerHTML = '<h3 style="font-weight: bold;">Top 10 Favorite Books</h3>'; // Reset header
+   
+    list.innerHTML='<button onclick="displayBottomToTop()">Bottom to Top</button>';  
+   
+    books.forEach(book => {
+        const li = document.createElement('li');
+        li.textContent = book;
+        list.appendChild(li);
+    });
+}
+
+function displayBottomToTop() {
+    const list = document.getElementById('bookList');
+    list.innerHTML = '<h3 style="font-weight: bold;">Top 10 Favorite Books</h3>'; // Reset header
+   
+    list.innerHTML='<button onclick="displayTopToBottom()">Top to Bottom</button>';
+    books.slice().reverse().forEach(book => {
+        const li = document.createElement('li');
+        li.textContent = book;
+        list.appendChild(li);
+    });
+}
+    </script>
+</body>
+</html>
